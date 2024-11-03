@@ -126,7 +126,7 @@ class Star extends Phaser.Physics.Arcade.Image {
         this.setAlpha(1);
         this.setDepth(0);
         this.damage = 1;
-        
+
         this.body.velocity.y = -1000;
 
         this.outOfBoundsEvent = gameScene.time.addEvent({

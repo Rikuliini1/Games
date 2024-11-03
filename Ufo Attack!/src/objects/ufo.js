@@ -114,10 +114,10 @@ class HealthBar extends Phaser.GameObjects.Rectangle {
         this.fullHealth = this.width;
         this.oneHealthDamage = this.width / ufoHealth;
 
-        this.ghostHealth = this.gameScene.add.rectangle(x, y, 70, 2, 0xff0000)
+        this.ghostHealth = this.gameScene.add.rectangle(x, y, 70, 2, 0xffffff)
             .setScale(1)
             .setOrigin(0.5)
-            .setAlpha(0.5)
+            .setAlpha(1)
             .setDepth(7);
 
         this.border = this.gameScene.add.rectangle(x, y, 72, 4, 0x000000)
@@ -189,9 +189,12 @@ class HealthBar extends Phaser.GameObjects.Rectangle {
     decreaseHealth(amount) {
         this.newWidth = this.width - (this.oneHealthDamage * amount);
         this.width = this.newWidth;
+        this.ghostHealth.width = this.ghostHealth.width;
+        this.ghostHealthTween?.stop();
         this.ghostHealthTween = this.scene.tweens.add ({
+            delay: 500,
             targets: this.ghostHealth,
-            duration: 900,
+            duration: 1000,
             width: {from: this.ghostHealth.width, to: this.newWidth},
         });
     };
@@ -220,6 +223,7 @@ class Bomb extends Phaser.Physics.Arcade.Image {
         this.damage = 1;
 
         this.body.gravity.y = 300;
+
         this.setCollideWorldBounds(true);
         this.body.onWorldBounds = true;
 
