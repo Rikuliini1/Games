@@ -1,4 +1,3 @@
 # Ufo Attack!
 
-This is my **first** game
-
+This is the **first** game by *Rikuliini1*
