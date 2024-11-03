@@ -1,4 +1,3 @@
 # Ufo Attack!
 
-This is my first game
-
+This is my **first** game
