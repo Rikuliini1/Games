@@ -1,4 +1,3 @@
-# Games
+# Game Repository
 
-# hello
-Repository for games
+This repository is for games
