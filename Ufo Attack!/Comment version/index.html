@@ -1,0 +1,46 @@
+<!-- This HTML file is the entry point for the "UFO Attack" game. 
+    It sets up the webpage structure, including the inclusion of the Phaser game framework, game logic, and styling.
+    The game will be rendered within the "game_window" <div> using Phaser, a popular JavaScript game development framework.
+    The file also includes meta tags for responsive design and character encoding. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  <!-- The <meta charset="UTF-8"> tag specifies the character encoding for the document. 
+                                It ensures the webpage can handle a wide variety of characters, including special symbols. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- This <meta> tag ensures the webpage is responsive by adjusting the width of the page 
+                                                                                according to the device's screen size. The "viewport" setting is key for mobile compatibility. -->
+    
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.85.0/dist/phaser.js"></script> <!-- This <script> tag loads the Phaser 3 library, which is the core game framework. 
+                                                                                    The version specified is 3.85.0, and it is loaded from a CDN (Content Delivery Network). -->
+
+    <script type="module" src="src/main.js" defer></script> <!-- This <script> tag loads the main.js file from the "src" folder, which contains the game's core logic.
+                                                                The 'defer' attribute ensures the script is executed after the HTML document is parsed.
+                                                                The "type=module" attribute allows the use of ES6 modules, enabling JavaScript imports and exports. -->
+
+    <link rel="stylesheet" href="css/styles.css">   <!-- This <link> tag references an external CSS file (styles.css) that contains styles for the webpage.
+                                                        It ensures the game and webpage have appropriate styling. -->
+    
+    <title>UFO Attack!</title>   <!-- The <title> tag specifies the title of the webpage, which is shown in the browser tab.
+                                    Here it is set to "UFO Attack", which is the name of the game. -->
+</head>
+<body>
+    <!-- The <div id="app"> element serves as a container for the entire application.
+        This is where the game and other app components (if any) are nested. -->
+    <div id="app">
+
+        <!-- The <div id="game_container"> acts as the main container for the game-related elements.
+            It may help with styling, positioning, or responsiveness. -->
+        <div id="game_container">
+
+            <!-- The <div id="game_window"> is where the actual game will be rendered.
+                Phaser will target this div to create the canvas where the game appears. -->
+            <div id="game_window">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- EOF -->
