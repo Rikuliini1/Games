@@ -1,2 +1,1 @@
-# Games
 Repository for games
