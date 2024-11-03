@@ -1,3 +1,3 @@
 # Game Repository
 
-This
+This repository is for games
